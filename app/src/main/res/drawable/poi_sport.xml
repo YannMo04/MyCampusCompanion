@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Fond du marqueur -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M24,4C18,4 13,9 13,15c0,10 11,25 11,25s11,-15 11,-25C35,9 30,4 24,4z"/>
+
+    <!-- Ballon de foot -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,13c-3.3,0 -6,2.7 -6,6s2.7,6 6,6s6,-2.7 6,-6S27.3,13 24,13z"/>
+
+    <!-- Pentagones du ballon -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M24,15l1.5,2l2,-0.5l-0.5,2l1.5,1.5l-2,0.5l-1,2l-1,-2l-2,-0.5l1.5,-1.5l-0.5,-2l2,0.5L24,15z"/>
+</vector>

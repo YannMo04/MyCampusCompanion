@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_actualites"
+        android:icon="@drawable/ic_actualites"
+        android:title="Actualités" />
+
+    <item
+        android:id="@+id/nav_annuaire"
+        android:icon="@drawable/ic_annuaire"
+        android:title="Annuaire" />
+
+    <item
+        android:id="@+id/nav_carte"
+        android:icon="@drawable/ic_carte"
+        android:title="Carte" />
+
+    <item
+        android:id="@+id/nav_signalement"
+        android:icon="@drawable/ic_signalement"
+        android:title="Signalement" />
+
+</menu>

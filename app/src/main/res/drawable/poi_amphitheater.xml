@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Fond du marqueur -->
+    <path
+        android:fillColor="#673AB7"
+        android:pathData="M24,4C18,4 13,9 13,15c0,10 11,25 11,25s11,-15 11,-25C35,9 30,4 24,4z"/>
+
+    <!-- Gradins -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,20h12v1.5H18V20z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M19,22h10v1.5H19V22z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,24h8v1.5h-8V24z"/>
+
+    <!-- Scène -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,13h12v5H18V13z"/>
+</vector>

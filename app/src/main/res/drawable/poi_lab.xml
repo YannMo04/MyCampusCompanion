@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Fond du marqueur -->
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M24,4C18,4 13,9 13,15c0,10 11,25 11,25s11,-15 11,-25C35,9 30,4 24,4z"/>
+
+    <!-- Ordinateur -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M19,13h10v8H19V13z"/>
+
+    <!-- Clavier -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,22h12v2H18V22z"/>
+
+    <!-- Base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,21v3h4v-3H22z"/>
+</vector>

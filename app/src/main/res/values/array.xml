@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="signalement_types">
+        <item>Problème technique</item>
+        <item>Problème de sécurité</item>
+        <item>Problème d\'hygiène</item>
+        <item>Dégradation matérielle</item>
+        <item>Accident</item>
+        <item>Autre</item>
+    </string-array>
+</resources>

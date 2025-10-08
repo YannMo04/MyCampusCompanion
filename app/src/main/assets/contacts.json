@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nom": "KOUASSI",
+    "prenom": "Dr JOHNSON",
+    "telephone": "0123456789",
+    "email": "johnson.kouassi@esatic.edu.ci",
+    "service": "Direction Pédagogique",
+    "poste": "Enseignante - Développement Mobile",
+    "photoUrl": ""
+  },
+  {
+    "id": 2,
+    "nom": "DIALLO",
+    "prenom": "Aminata",
+    "telephone": "0145678901",
+    "email": "aminata.diallo@esatic.edu.ci",
+    "service": "Scolarité",
+    "poste": "Responsable des Inscriptions",
+    "photoUrl": ""
+  },
+  {
+    "id": 3,
+    "nom": "TRAORÉ",
+    "prenom": "Moussa",
+    "telephone": "0167890123",
+    "email": "moussa.traore@esatic.edu.ci",
+    "service": "Bibliothèque",
+    "poste": "Bibliothécaire en Chef",
+    "photoUrl": ""
+  },
+  {
+    "id": 4,
+    "nom": "KONÉ",
+    "prenom": "Fatou",
+    "telephone": "0189012345",
+    "email": "fatou.kone@esatic.edu.ci",
+    "service": "Administration",
+    "poste": "Secrétaire Générale",
+    "photoUrl": ""
+  },
+  {
+    "id": 5,
+    "nom": "YAO",
+    "prenom": "Jean-Baptiste",
+    "telephone": "0101234567",
+    "email": "jean.yao@esatic.edu.ci",
+    "service": "Service Technique",
+    "poste": "Technicien Informatique",
+    "photoUrl": ""
+  },
+  {
+    "id": 6,
+    "nom": "BAMBA",
+    "prenom": "Marie-Claire",
+    "telephone": "0123456780",
+    "email": "marie.bamba@esatic.edu.ci",
+    "service": "Restaurant Universitaire",
+    "poste": "Gestionnaire",
+    "photoUrl": ""
+  },
+  {
+    "id": 7,
+    "nom": "SANOGO",
+    "prenom": "Ibrahim",
+    "telephone": "0145678902",
+    "email": "ibrahim.sanogo@esatic.edu.ci",
+    "service": "Sécurité",
+    "poste": "Chef de la Sécurité",
+    "photoUrl": ""
+  },
+  {
+    "id": 8,
+    "nom": "OUATTARA",
+    "prenom": "Aïcha",
+    "telephone": "0167890124",
+    "email": "aicha.ouattara@esatic.edu.ci",
+    "service": "Service Social",
+    "poste": "Assistante Sociale",
+    "photoUrl": ""
+  }
+]

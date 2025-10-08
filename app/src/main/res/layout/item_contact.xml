@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Initiales du contact (cercle) -->
+        <TextView
+            android:id="@+id/textViewInitials"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:text="AB"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Conteneur des informations -->
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/textViewInitials"
+            app:layout_constraintEnd_toStartOf="@id/layoutButtons"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Nom complet -->
+            <TextView
+                android:id="@+id/textViewNom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom Prénom"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <!-- Service et Poste -->
+            <TextView
+                android:id="@+id/textViewService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service - Poste"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2" />
+
+            <!-- Téléphone -->
+            <TextView
+                android:id="@+id/textViewTelephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 0123456789"
+                android:textSize="14sp"
+                android:textColor="?attr/colorPrimary"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Boutons d'action -->
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Bouton Appel -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCall"
+                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/appeler"
+                app:icon="@android:drawable/ic_menu_call"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp" />
+
+            <!-- Bouton SMS -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSms"
+                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/envoyer_sms"
+                app:icon="@android:drawable/ic_menu_send"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

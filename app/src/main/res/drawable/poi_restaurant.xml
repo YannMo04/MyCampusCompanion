@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Fond du marqueur -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M24,4C18,4 13,9 13,15c0,10 11,25 11,25s11,-15 11,-25C35,9 30,4 24,4z"/>
+
+    <!-- Fourchette -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,12v4c0,0.5 0.5,1 1,1h0v8h2v-8h0c0.5,0 1,-0.5 1,-1v-4h-1v4h-0.5v-4h-1v4H21v-4H20z"/>
+
+    <!-- Couteau -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M27,12v5c0,1 0.5,1.5 1,1.5v6.5h1.5v-6.5c0.5,0 1,-0.5 1,-1.5v-5H27z"/>
+</vector>

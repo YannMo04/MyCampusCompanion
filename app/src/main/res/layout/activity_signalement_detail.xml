@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="Détail du signalement"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <!-- Contenu scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Card principale -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- En-tête (Type + Statut) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <!-- Type -->
+                        <TextView
+                            android:id="@+id/textViewType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Problème technique"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary" />
+
+                        <!-- Statut -->
+                        <TextView
+                            android:id="@+id/textViewStatut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EN_ATTENTE"
+                            android:textSize="12sp"
+                            android:background="@android:color/holo_orange_light"
+                            android:padding="6dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Titre -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Titre"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewTitre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Titre du signalement"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Description -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description détaillée du signalement"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Date -->
+                    <TextView
+                        android:id="@+id/textViewDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📅 Créé le : 07/10/2025"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Localisation -->
+                    <TextView
+                        android:id="@+id/textViewLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Position : 5.359951, -4.008259"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/darker_gray" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card Média (Photo ou Vidéo) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Image -->
+                    <ImageView
+                        android:id="@+id/imageViewPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="300dp"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Photo du signalement" />
+
+                    <!-- Video avec contrôles -->
+                    <FrameLayout
+                        android:id="@+id/frameLayoutVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <VideoView
+                            android:id="@+id/videoViewVideo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="300dp" />
+
+                        <!-- Icône Play par dessus -->
+                        <ImageView
+                            android:id="@+id/imageViewPlayIcon"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center"
+                            android:src="@android:drawable/ic_media_play"
+                            android:background="@drawable/circle_background"
+                            android:contentDescription="Lire la vidéo"
+                            android:padding="12dp" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <!-- Bouton Voir sur la carte -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonViewMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🗺️ Voir sur la carte"
+                android:textSize="16sp"
+                android:visibility="gone"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

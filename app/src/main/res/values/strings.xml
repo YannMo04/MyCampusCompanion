@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Campus Companion</string>
+    <string name="envoyer_sms">Envoyer SMS</string>
+    <string name="appeler">Appeler</string>
+    <string name="signalement">Signalement</string>
+    <string name="carte">Carte</string>
+    <string name="annuaire">Annuaire</string>
+    <string name="actualit_s">Actualités</string>
+</resources>
