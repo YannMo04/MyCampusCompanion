@@ -39,6 +39,11 @@ public class SignalementViewModel extends AndroidViewModel {
         repository.deleteSignalement(signalement);
     }
 
+    public void deleteAllSignalement() {
+        repository.deleteAllSignalement();
+    }
+
+
     public LiveData<Location> getCurrentLocation() {
         return repository.getCurrentLocation();
     }

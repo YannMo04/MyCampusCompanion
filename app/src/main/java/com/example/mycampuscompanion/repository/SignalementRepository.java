@@ -63,4 +63,11 @@ public class SignalementRepository {
     public LiveData<Location> getCurrentLocation() {
         return locationRepository.getCurrentLocation();
     }
+
+    public void deleteAllSignalement() {
+        executor.execute(() -> {
+            signalementDao.deleteAllSignalements();
+            Log.d(TAG, "Tous les signalements supprimé");
+        });
+    }
 }

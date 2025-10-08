@@ -35,4 +35,6 @@ public interface SignalementDao {
 
     @Query("DELETE FROM signalements")
     void deleteAllSignalements();
+
+
 }

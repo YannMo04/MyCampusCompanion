@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class SignalementAdapter extends RecyclerView.Adapter<SignalementAdapter.
 
     public interface OnSignalementClickListener {
         void onSignalementClick(Signalement signalement);
+        void onDeleteClick(Signalement signalement, int position); // AJOUTÉ
     }
 
     public SignalementAdapter(Context context, OnSignalementClickListener listener) {
@@ -117,10 +119,17 @@ public class SignalementAdapter extends RecyclerView.Adapter<SignalementAdapter.
             holder.frameLayoutMedia.setVisibility(View.GONE);
         }
 
-        // Click listener
+        // Click sur l'item entier
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onSignalementClick(signalement);
+            }
+        });
+
+        // Click sur le bouton supprimer (AJOUTÉ)
+        holder.buttonDelete.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onDeleteClick(signalement, position);
             }
         });
     }
@@ -135,6 +144,18 @@ public class SignalementAdapter extends RecyclerView.Adapter<SignalementAdapter.
         notifyDataSetChanged();
     }
 
+    // AJOUTÉ : Méthode pour supprimer un item avec animation
+    public void removeItem(int position) {
+        signalements.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position, signalements.size());
+    }
+
+    // AJOUTÉ : Méthode pour récupérer un signalement à une position
+    public Signalement getSignalementAt(int position) {
+        return signalements.get(position);
+    }
+
     static class SignalementViewHolder extends RecyclerView.ViewHolder {
 
         TextView textViewType;
@@ -146,6 +167,7 @@ public class SignalementAdapter extends RecyclerView.Adapter<SignalementAdapter.
         FrameLayout frameLayoutMedia;
         ImageView imageViewPreview;
         LinearLayout linearLayoutVideoOverlay;
+        ImageButton buttonDelete; // AJOUTÉ
 
         public SignalementViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -158,6 +180,7 @@ public class SignalementAdapter extends RecyclerView.Adapter<SignalementAdapter.
             frameLayoutMedia = itemView.findViewById(R.id.frameLayoutMedia);
             imageViewPreview = itemView.findViewById(R.id.imageViewPreview);
             linearLayoutVideoOverlay = itemView.findViewById(R.id.linearLayoutVideoOverlay);
+            buttonDelete = itemView.findViewById(R.id.buttonDelete); // AJOUTÉ
         }
     }
 }
